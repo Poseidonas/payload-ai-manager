@@ -1,0 +1,80 @@
+{
+  "name": "payload-ai-manager",
+  "version": "1.0.0",
+  "description": "Claude, ChatGPT, Gemini and Kimi for Payload: writes product descriptions, attribute lists and translations into the fields you choose, and never twice for the same content.",
+  "keywords": [
+    "payload",
+    "payloadcms",
+    "payload-plugin",
+    "ecommerce",
+    "ai",
+    "claude",
+    "chatgpt",
+    "gemini",
+    "kimi",
+    "translation",
+    "product-descriptions"
+  ],
+  "homepage": "https://github.com/Poseidonas/payload-ai-manager",
+  "bugs": "https://github.com/Poseidonas/payload-ai-manager/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Poseidonas/payload-ai-manager.git"
+  },
+  "license": "MIT",
+  "author": "George Vasiliades (https://github.com/Poseidonas)",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "default": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "scripts": {
+    "build": "tsup",
+    "clean": "rimraf dist",
+    "lint": "eslint src test",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@anthropic-ai/sdk": "0.71.0",
+    "@eslint/js": "9.39.1",
+    "@types/node": "22.19.9",
+    "eslint": "9.39.1",
+    "payload": "3.88.0",
+    "rimraf": "6.0.1",
+    "tsup": "8.5.0",
+    "typescript": "5.7.2",
+    "typescript-eslint": "8.46.4",
+    "vitest": "4.0.18"
+  },
+  "peerDependencies": {
+    "@anthropic-ai/sdk": ">=0.60.0 <1",
+    "@payloadcms/plugin-ecommerce": ">=3.88 <4",
+    "payload": ">=3.88 <4"
+  },
+  "peerDependenciesMeta": {
+    "@anthropic-ai/sdk": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public",
+    "provenance": true
+  }
+}
